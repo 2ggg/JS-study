@@ -13,12 +13,20 @@ s :	return
 
 function solution(s) {
   var answer = '';
+  let leng = s.length;
   console.log(s.length+'글자');
   
-  if(s.length % 2 == 0){  //짝수일때
-      answer = s[s.length/2-1] + s[s.length/2];
-  }else{                  //홀수일때
-      answer = s[Math.floor(s.length/2)];
+  // if(s.length % 2 == 0){  //짝수일때
+  //     answer = s[s.length/2-1] + s[s.length/2];
+  // }else{                  //홀수일때
+  //     answer = s[Math.floor(s.length/2)];
+  // }
+  
+  //substr 사용시
+  if(s.length % 2 == 0){
+      answer = s.substr(leng/2-1, 2);
+  }else{
+      answer = s.substr(Math.floor(leng/2), 1);
   }
   
   return answer;
