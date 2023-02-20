@@ -56,4 +56,4 @@ function solution(n) {
     let num = Math.sqrt(n); //n의 제곱근
     return answer = Number.isInteger(num) ? (num+1)**2 : -1;
     //n의 제곱근이 정수인지 아닌지 확인하는 것으로 간단히 끝냄.
-  }
+}
